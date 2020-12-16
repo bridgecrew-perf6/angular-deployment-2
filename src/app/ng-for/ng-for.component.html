@@ -1,0 +1,17 @@
+
+<div>
+    <input type="text" [(ngModel)]="textName">
+    <!-- [ngClass]="{
+    'a':selected,
+    'b': !selected
+    }" -->
+<button class="btn btn-success ml-2" (click)="Add()" [ngStyle]="{'backgroundColor': selected ? 'gray': 'yellow'}"  >Add</button>
+</div>
+<ul>
+    <!-- <li *ngFor="let course of courses; index as i" >
+        {{i}} : {{course.name}}
+    </li> -->
+    <li *ngFor="let course of courses; even as isEven; trackBy:trackCourseById">
+        {{course.id}} -  {{course.name}} <span *ngIf="isEven" >(Even)</span>
+    </li>
+</ul>

@@ -1,0 +1,34 @@
+<!-- <nav class="nav nav-tabs"> -->
+    <!-- <div class="container-fluid">
+        <div class="collapse navbar-collaspe">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Followers</a>
+                </li>
+                <li>
+                    <a href="#">Post</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- <form class="form-inline">
+      <button class="btn btn-outline-success mr-3">Followers</button>
+        <button class="btn btn-outline-success">Post</button>
+    </form> -->
+ <!-- <a href="" class="nav-item nav-link active">Followers</a>
+<a href="" class="nav-item nav-link">Post</a>
+</nav> -->
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a routerLink="/followers" routerLinkActive="active current" class="nav-link">Followers</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="/posts" routerLinkActive="active current" class="nav-link ">Post</a>
+    </li>
+    <li class="nav-item">
+        <a [routerLink]="['/followers', arr.id, arr.name]"[queryParams]="{page:1, order:'newest'}" routerLinkActive="active current" class="nav-link ">Profile</a>
+    </li>
+</ul>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
